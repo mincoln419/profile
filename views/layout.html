@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel='stylesheet' href='style.css'/>
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+
+           
+            body::after{
+              width: 100%;
+              height: 100%;
+              content: "";
+              background-image: url('/wallpaperbetter.jpg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: -1;
+              opacity: 0.3;
+            }
+
+          </style>
+      
+          
+          <!-- Custom styles for this template -->
+        <link href="carousel.css" rel="stylesheet">
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="main container py-4">
+            <header>{% include 'header.html'%} </header>
+            {% block content %}
+            {% endblock %}
+            <footer>{% include 'footer.html'%}</footer>
+            {% block script %} 
+            {% endblock %}
+        </div>
+    </body>
+
+</html>
