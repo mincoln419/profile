@@ -1,0 +1,108 @@
+{% extends './template/layout.html' %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/js-mindmap.css" />
+<link href="/style.css" type="text/css" rel="stylesheet"/>
+<main class="px-3">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="row g-5 py-5"></div>
+            <div class="row g-5 py-5"></div>
+            <div class="row g-5 py-5"></div>
+
+            <mindmap id="mindmap">
+                <ul>
+                    <li><a href="/">Stack</a>
+                      <ul>
+                        <li><a href="/linux.png" target="_blank" class="icon rss">Linux</a></li>
+                        <li><a href="/window.png" target="_blank" class="icon rss">Windows</a></li>
+                        <li><a href="/unix.png" target="_blank" class="icon rss">UNIX</a></li>
+                        
+                        
+                            
+                        <li><a href="/tomcat.png" target="_blank" class="icon rss">Tomcat</a></li>
+                        <li><a href="/jeus.png" target="_blank" class="icon rss">Zeus</a></li>                
+                            
+                        
+                        <li><a href="/aws.png" target="_blank" class="icon rss">AWS</a></li>
+                        <li><a href="/java.jpg">JAVA</a>
+                          <ul>
+                            <li><a href="/jdk.jpg" title="View all posts filed under General">jdk</a>
+                                <ul>
+                                <li><a href="/" title="View all posts filed under Personal">JDK 1.6</a></li>
+                                <li><a href="/" title="View all posts filed under Personal">JDK 1.7</a></li>
+                                <li><a href="/" title="View all posts filed under Personal">JDK 1.8</a></li>
+                                </ul>
+                            </li>  
+                            <li><a href="/spring.png" title="View all posts filed under General">SPRING</a>
+                                <ul>
+                                <li><a href="/" title="View all posts filed under Personal">SPRING 3.2</a></li>
+                                <li><a href="/" title="View all posts filed under Personal">SPRING 2.5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/struts.jpg" title="View all posts filed under Projects">STRUTS</a></li>
+                            <li><a href="/egove.png" title="View all posts filed under Ranting">eGOV Framework</a></li> 
+                            <li><a href="/springboot.png" title="View all posts filed under Work"></a>SPRING BOOT</li>
+                          </ul>
+                        </li>
+                        <li><a href="/javascript.png">JAVASCRIPT</a>
+                          <ul>
+                            <li><a href="/bootstrap.png" title="About Kenneth">Bootstrap</a></li> 
+                            <li><a href="/jquery.gif" title="Employment">jquery</a></li> 
+                            <li><a href="/react.png" title="Experiments">react</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="/nodejs.png">Node.js</a>
+                            <ul>
+                              <li><a href="/express.png" title="About Kenneth">express</a></li> 
+                              <li><a href="/nunjucks.jpg" title="Employment">nunjucks</a></li> 
+                              <li><a href="/sequelize.png" title="Experiments">sequelizer</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/mybatis.jpg">Mybatis</a>
+                            <ul>
+                              <li><a href="/ibatis.png" title="About Kenneth">ibatis</a></li> 
+                            </ul>
+                        </li>
+                        <li><a href="/oracle.png" title="View all posts filed under General">ORACLE</a>
+                            <ul>
+                                <li><a href="/" title="View all posts filed under Personal">ORACLE 10g</a></li>
+                                <li><a href="/" title="View all posts filed under Personal">ORACLE 11g</a></li>
+                                <li><a href="/" title="View all posts filed under Personal">ORACLE 12g</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/mysql.png" title="View all posts filed under General">MySQL</a>
+                            <ul>
+                               <li><a href="/" title="View all posts filed under Personal">MySQL 8.0</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/postgresql.png" title="View all posts filed under General">PostgreSQL</a>
+                            <ul>
+                                <li><a href="/" title="View all posts filed under Personal">PostgreSQL 11</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+            </mindmap>
+        </div>
+      </div>
+</main>
+{% endblock %}
+{% block script %}
+<!-- jQuery -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" crossorigin="anonymous"></script>
+<!-- UI, for draggable nodes -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
+
+<!-- Raphael for SVG support (won't work on android) -->
+<script type="text/javascript" src="/raphael-min.js"></script>
+
+<!-- Mindmap -->
+<script type="text/javascript" src="/js-mindmap.js"></script>
+
+<!-- Kick everything off -->
+<script src="/stack.js" type="text/javascript"></script>
+
+{% endblock %}

@@ -7,7 +7,8 @@
     "app": "app.js"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production PORT=80 pm2 start app.js"
+    "start": "cross-env NODE_ENV=production PORT=80 pm2 start app.js",
+    "dev" : "nodemon app.js"
   },
   "homepage": "https://mincoln419.github.io/profile/",
   "author": "MincolnCho",

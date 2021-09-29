@@ -1,11 +1,215 @@
-{% extends 'layout.html' %}
+{% extends './template/layout.html' %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="/js-mindmap.css" />
+<link href="/style.css" type="text/css" rel="stylesheet"/>
+<body class="px-3">
+    <div class="row g-5">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            It's a Chance! Give Yourself A Try by The Project Done.
+          </h3>
+          <article class="blog-post">
+            <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/mincoln.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h2 class="blog-post-title">조민건</h2>
+                    <p class="blog-post-meta">Mincoln Cho</p>
+                  </div>
+                </div>
+              </div>
+
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th>H.P</th>
+                    <th>010-8013-9108</th>
+                  </tr>
+                  <tr>
+                    <td>EMAIL</td>
+                    <td>mincoln419@naver.com</td>
+                  </tr>
+                  <tr>
+                    <td>BLOG</td>
+                    <td><a href= 'http://blog.naver.com/mincoln419' >http://blog.naver.com/mincoln419</a></td>
+                  </tr>
+                  <tr>
+                    <td>WEB PAGE</td>
+                    <td><a href= 'http://mermer.kr'>http://mermer.kr</a></td>
+                  </tr>
+                </tbody>
+              </table>
 
 
+            <hr>
+            
+            <h3><strong>간략한 소개</strong></h3>
+            <p class="border-bottom">JAVA를 주 개발언어로 하고 node,js 와 react.js를 배우고 있는 3년차 주니어 개발자입니다<br>
+               신규 프로젝트부터, 레거시 기능개선, 프레임워크 전환, 유지보수까지 여러 프로젝트에서 경험치를 쌓아왔습니다.<br>
+               고객과 동료개발자들과의 수월한 소통을 추구합니다. 요구사항 협의와 코드 리뷰를 좋아합니다<br>
+               개발자는 평생 공부해야 하는 존재라는 직업관을 가지고 있으며, 즐거운 마음으로 새로운 기술 트렌드를 계속 공부하고 있습니다.<br>
+            </p>
+            <div class="row g-5 py-5"></div>
+            <h3><strong>보유 기술</strong></h3>
+            <dl>
+              <dt>OS</dt>
+              <dd>
+                <ul>
+                    <li>Linux (Ubuntu, centOS)</li>
+                    <li>UNIX</li>
+                    <li>Windows</li>
+                  </ul>
+              </dd>
+              <dt>Develope Language</dt>
+              <dd>
+                <ul>
+                    <li>JAVA</li>
+                    <li>C#(learning now)</li>
+                    <li>Python(learning now)</li>
+                    <li>Javascript(node.js, react.js, jquery, extjs etc)</li>
+                    <li>PL/SQL</li>
+                  </ul>
+              </dd>
+              <dt>WAS</dt>
+              <dd>
+                <ul>
+                    <li>Zeus</li>
+                    <li>Tomacat(7.0, 8.0)</li>
+                  </ul>
+              </dd>
+              <dt>Web Server</dt>
+              <dd>
+                <ul>
+                    <li>Apache</li>
+                    <li>WebtoB</li>
+                    <li>Node.js</li>
+                  </ul>
+              </dd>
+              <dt>Framework</dt>
+              <dd>
+                <ul>
+                    <li>Spring</li>
+                    <li>Spring Boot</li>
+                    <li>Struts</li>
+                    <li>Egoverment Framwork</li>
+                    <li>Devon(LG CNS)</li>
+                    <li>Express(node.js)</li>
+                    <li>Mybatis</li>
+                    <li>ibatis</li>
+                  </ul>
+              </dd>
+              <dt>Database</dt>
+              <dd>
+                <ul>
+                    <li>Oracle</li>
+                    <li>MySql</li>
+                    <li>PostgreSql</li>
+                  </ul>
+              </dd>
+              <dt>AWS</dt>
+              <dd>
+                <ul>
+                    <li>Light Sail</li>
+                    <li>RDS</li>
+                  </ul>
+              </dd>
+            </dl>
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+            <h3><strong>참여 프로젝트</strong></h3>
+
+            <h4>국민연금외화금고 구축 프로젝트</h4>
+            <h5>2018.03. ~ 2018.08.</h5>
+            <h5>- 수행사: 코어뱅크</h5>
+            <h5>- 고객사: 하나은행</h5>
+            <dt>내용</dt>
+            <dd>
+            국민연금 외화자금 투자, 관리를 위한 금고 시스템 구축.<br>
+            하나은행 계정계 시스템, 국민연금과 Interface를 통해 국민연금 내부망에서 직접 외화투자관리가 가능하도록함.
+            </dd>
+            <dt>담당업무</dt>
+            <dd>
+            업무공통파트.<br>
+            외화금고 시스템의 공통 화면, 팝업 및 모듈 프로그램 개발.<br>
+            국제 금융기관에서 공통으로 사용하는 기초데이터 수신 인터페이스 개발.<br>
+            하나은행 계정계 시스템으로 부터 정기적으로 코드성 데이터, 환율데이터를 자동 최신화 시키는 배치프로그램 개발.<br>
+            </dd>
+            <dt>개발환경</dt>
+            <dd>
+                <ul>
+                    <li>Java Project</li>
+                    <li>OS: UNIX</li>
+                    <li>WAS: ZEUS</li>
+                    <li>Framwork: SPRING(v 3.2), Yframe(코어뱅크 자체 js framework), ibatis</li>
+                    <li>Sceduler: ControlM</li>
+                    <li>DB tool: Orange</li>
+                  </ul>
+            </dd>
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+            <h2>국민연금외화금고 구축 프로젝트</h2>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+            <h2>국민연금외화금고 구축 프로젝트</h2>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+          </article>
+    
+          <article class="blog-post">
+            <h2 class="blog-post-title">Another blog post</h2>
+            <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+    
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <blockquote>
+              <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+            </blockquote>
+            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+            <h3>Example table</h3>
+            <p>And don't forget about tables in these posts:</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Upvotes</th>
+                  <th>Downvotes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alice</td>
+                  <td>10</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td>Bob</td>
+                  <td>4</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Charlie</td>
+                  <td>7</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Totals</td>
+                  <td>21</td>
+                  <td>23</td>
+                </tr>
+              </tfoot>
+            </table>
+    
+            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+          </article>
+          </div>
+          </div>
+    </body>
 
 {% endblock %}
 
-
-{% block script %}
-{% endblock %}

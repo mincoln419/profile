@@ -32,6 +32,7 @@ const ghpages = require('gh-pages');
 const indexRouter = require('./routes');
 const profileRouter = require('./routes/profile');
 const stackRouter = require('./routes/stack');
+const resumeRouter = require('./routes/resume');
 
 
 
@@ -85,7 +86,7 @@ app.use(session(sessionOption));
 app.use('/', indexRouter);
 app.use('/profile', profileRouter);
 app.use('/stack', stackRouter);
-app.use('/resume', stackRouter);
+app.use('/resume', resumeRouter);
 
 /******************************************************************
 ********************** Multipart upload/download ******************
