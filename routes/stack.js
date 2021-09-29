@@ -4,7 +4,10 @@ const router = express.Router();
 //GET / 라우터
 router.get('/', async (req, res) => {
     try{
-        res.render('stack');
+        res.render('stack', 
+            {title: 'Tech Stack',
+             menu: 'Stack'
+        });
     }catch(err){
         console.err(err);
         next(err);

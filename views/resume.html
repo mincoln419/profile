@@ -120,22 +120,61 @@
             <div class="row g-5 py-5 border-bottom"></div>
             <div class="row g-5 py-5"></div>
             <h3><strong>참여 프로젝트</strong></h3>
-
-            <h4>국민연금외화금고 구축 프로젝트</h4>
-            <h5>2018.03. ~ 2018.08.</h5>
-            <h5>- 수행사: 코어뱅크</h5>
-            <h5>- 고객사: 하나은행</h5>
+            <div class="row g-5 py-5"></div>
+            <h4><strong>공영쇼핑 유지보수 및 개발</strong></h4>
+            <h5>2019.12. ~ 2021.07.</h5>
+            <h5>- 수행사: LND시스템</h5>
+            <h5>- 고객사: 공영쇼핑</h5>
             <dt>내용</dt>
             <dd>
-            국민연금 외화자금 투자, 관리를 위한 금고 시스템 구축.<br>
-            하나은행 계정계 시스템, 국민연금과 Interface를 통해 국민연금 내부망에서 직접 외화투자관리가 가능하도록함.
+            공영쇼핑 영업시스템 및 기초 데이터베이스 유지보수<br>
+            유지보수 인력이 유지보수와 동시에 내부적으로 개발 프로젝트 진행하는 업무구조
+            </dd>
+            <dt>개발환경</dt>
+            <dd>
+                <ul>
+                    <li>Java Project</li>
+                    <li>OS: Linux(CentOs)</li>
+                    <li>WAS: ZEUS</li>
+                    <li>Web Aplication: WebtoB</li>
+                    <li>Framwork: EgovFramework(v 3.5), ext.js, mybatis</li>
+                    <li>Sceduler: Oracle Job Scheduler, SpringBoot </li>
+                    <li>DB: Oracle</li>
+                    <li>DB tool: SQL/Developer, ERwin, MetaQuality</li>
+                    <li>Monioring Tool: Sonarqube, RabbitMQ, Sysmaster, Scouter etc.</li>
+                    <li>Deploy: Jenkins</li>
+                  </ul>
             </dd>
             <dt>담당업무</dt>
             <dd>
-            업무공통파트.<br>
-            외화금고 시스템의 공통 화면, 팝업 및 모듈 프로그램 개발.<br>
-            국제 금융기관에서 공통으로 사용하는 기초데이터 수신 인터페이스 개발.<br>
-            하나은행 계정계 시스템으로 부터 정기적으로 코드성 데이터, 환율데이터를 자동 최신화 시키는 배치프로그램 개발.<br>
+            물류파트<br>
+            <strong>* 유지보수업무</strong> - 출고/회수, 반출, 입고/재고 주담당<br>
+            - 물류업무 특성상 자동배치프로그램과 택배사, EMS, LMS, 카카오톡 등 인터페이스가 많음<br>
+            - 배치프로그램은 오라클 Procedure 기반의 배치와 스프링부트 배치가 혼재하고, 특히 Procedure가 많아서 PL/SQL 작업에 많은 시간을 할당<br>
+            - 현업 요구사항에 따라 인덱스 추가가 많은 편인데, 이때문에 기존 플랜이 바뀌어서 속도 저하가 발생하는 경우가 많아 새로운 인덱스를 연구하거나 힌트를 추가하는 경우가 많았음.<br>
+            - 데이터량이 많은 주문, 상품 테이블과 물류 테이블 다수를 join 하다보니 병렬 처리로 속도개선한 케이스도 있음<br>
+            - 업무를 담당하는 동안 지속적으로 모니터링 하며 SQL 튜닝작업을 한 결과 100개 되었던 timeout APM Exception이 철수할때쯤에는 5건 이하로 떨어짐 <br>
+            <strong>* 프로젝트성 개발 건</strong><br>
+            - 공급계획 출고지연패널티 적용 프로그램<br>
+            - 출고지시 제외 설정 프로그램<br>
+            - 직매입 품의 - 그룹웨어 - 전자계약시스템 연동 : 2020.06. ~ 2020.09.<br>
+            &nbsp;&nbsp;그룹웨어 업체: 더존/ 전자계약시스템 업체: 아이서트<br>
+            &nbsp;&nbsp;연동방법: 그룹웨어 - API Interface / 전자계약 - DB to DB<br>
+            - 물류 선입선출 프로세스 : 2020.10 ~ 2021.03.
+            </dd>           
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+
+
+            <h4><strong>우정사업본부 차세대 - 프레임워크 전환 프로젝트</strong></h4>
+            <h5>2019.01. ~ 2019.11.</h5>
+            <h5>- 수행사: LG CNS</h5>
+            <h5>- 고객사: 우정사업본부</h5>
+            <dt>내용</dt>
+            <dd>
+            인공지능형 우편관리시스템 개발 사업 중 프레임워크 전환 프로젝트<br>
+            Struts 기반의 구 프레임워크와 가우스로 개발된 업무시스템을 Spring기반의 DevOn 프레임워크에서 구동되도록 프레임워크 전환, 일부 메뉴 exbuilder6 로 리뉴얼
+            나주 개발팀의 exbuilder6 신규화면 연동테스트 지원
             </dd>
             <dt>개발환경</dt>
             <dd>
@@ -143,73 +182,63 @@
                     <li>Java Project</li>
                     <li>OS: UNIX</li>
                     <li>WAS: ZEUS</li>
+                    <li>Web Aplication: WebtoB</li>
+                    <li>Framwork: DevON(LG CNS), exbuilder6(토마토시스템), mybatis</li>
+                    <li>DB: Oracle</li>
+                    <li>DB tool: SQL Developer</li>
+                    <li>Deploy: Jenkins</li>
+                  </ul>
+            </dd>
+            <dt>담당업무</dt>
+            <dd>
+            프레임워크 전환팀.<br>
+            1차: 실시간 우편현황 모니터링 파트, 우편장비관리, 우편통계 등 프레임워크 전환 담당 <br>
+            2차: PDA 담당 직원의 갑작스러운 철수로 PDA 인터페이스 전환작업 및 테스트 담당 <br>
+            
+            1차 전환작업에서는 특이사항 없이 일정에 앞서 전환작업 및 테스트, 통합테스트 지원까지 정상 수행<br>
+            2차 전환작업에서 인수인계후 프로그램 분석 중, PDA 담당 직원가 테스트 없이 기계적인 전환작업을 한 것이 확인<br>
+            혹시나 했지만 역시나 인터페이스 통합테스트에서 결함이 발견<br>
+            가장 큰 오류의 원인은 데이터 조회 순서대로 JSON으로 된 전문이 생성되어 전달되어야 하는데 단순 HashMap으로 인터페이스 모듈에 설정되어있는 것이 원인<br>
+            오류원인 확인 후 LinkedMap으로 변경하는 작업을 하고, 모든 PDA 세부 모듈에 대한 다른 오류 확인 작업과 수정을 해야한다고 판단.<br>
+            신속하게 PL과 PM에게 보고후, 회의를 통해 추가 인원 투입에 대해 결정 -> 2개월 남짓한 기간동안 인터페이스 전환 작업 및 통합테스트까지 수행 완료<br>
+            </dd>           
+            <div class="row g-5 py-5 border-bottom"></div>
+            <div class="row g-5 py-5"></div>
+            <h4><strong>국민연금외화금고 구축 프로젝트</strong></h4>
+            <h5>2018.03. ~ 2018.07.</h5>
+            <h5>- 수행사: 코어뱅크</h5>
+            <h5>- 고객사: 하나은행</h5>
+            <dt>내용</dt>
+            <dd>
+            국민연금 외화자금 투자, 관리를 위한 금고 시스템 구축.<br>
+            하나은행 계정계 시스템, 국민연금과 Interface를 통해 국민연금 내부망에서 직접 외화투자관리가 가능하도록함.
+            </dd>
+            <dt>개발환경</dt>
+            <dd>
+                <ul>
+                    <li>Java Project</li>
+                    <li>OS: UNIX</li>
+                    <li>WAS: ZEUS</li>
+                    <li>Web Aplication: WebtoB</li>
                     <li>Framwork: SPRING(v 3.2), Yframe(코어뱅크 자체 js framework), ibatis</li>
                     <li>Sceduler: ControlM</li>
+                    <li>DB: Oracle</li>
                     <li>DB tool: Orange</li>
                   </ul>
             </dd>
-            <div class="row g-5 py-5 border-bottom"></div>
+            <dt>담당업무</dt>
+            <dd>
+            업무공통파트.<br>
+            외화금고 시스템의 공통 화면, 팝업 및 모듈 프로그램 개발.(사용자관리, 메뉴관리, 코드관리 등)<br>
+            국제 금융기관에서 공통으로 사용하는 기초데이터 수신 인터페이스 개발.<br>
+            하나은행 계정계 시스템으로 부터 정기적으로 코드성 데이터, 환율데이터를 자동 최신화 시키는 배치프로그램 개발.<br>
+            스프링배치와 데몬을 사용한 자동화 프로그래밍 경험자가 AA이외에 없어 API 참고하여 프로토타입 코딩 수행<br>
+            </dd>           
             <div class="row g-5 py-5"></div>
-            <h2>국민연금외화금고 구축 프로젝트</h2>
-            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-            <div class="row g-5 py-5 border-bottom"></div>
-            <div class="row g-5 py-5"></div>
-            <h2>국민연금외화금고 구축 프로젝트</h2>
-            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-            <div class="row g-5 py-5 border-bottom"></div>
-            <div class="row g-5 py-5"></div>
+
           </article>
     
-          <article class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
-            <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
-    
-            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-            <blockquote>
-              <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-            </blockquote>
-            <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-            <h3>Example table</h3>
-            <p>And don't forget about tables in these posts:</p>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Upvotes</th>
-                  <th>Downvotes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Alice</td>
-                  <td>10</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td>Bob</td>
-                  <td>4</td>
-                  <td>3</td>
-                </tr>
-                <tr>
-                  <td>Charlie</td>
-                  <td>7</td>
-                  <td>9</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>Totals</td>
-                  <td>21</td>
-                  <td>23</td>
-                </tr>
-              </tfoot>
-            </table>
-    
-            <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-          </article>
-          </div>
-          </div>
-    </body>
+
 
 {% endblock %}
 
